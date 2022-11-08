@@ -4,14 +4,11 @@ int size = Convert.ToInt32(Console.ReadLine());
 string[] array = new string[size];
 for (int i = 0; i < size; i++)
 {
-    Console.Write("Введите строку №{0}:\r\n    ", i + 1);
-    array[i] = Console.ReadLine()!;
+    Console.WriteLine("Введите строку №{0}", i + 1);
+    array[i] = Console.ReadLine()!;                 // ! - принудительное разрешение возможного NULL (не изучали проверку на NULL)
 }
 Console.Write("Нажмите [Enter] для вывода вашего массива и созданного из него массива, у которого длина всех элементов >=3");
 Console.ReadLine();
-
-
-// string[] array = { "yes", "no", "hello", "world", "res", "hi", "12345" };
 
 string[] NewArrayWithElementsSizesNoMoreThreeSymbols(string[] array)
 {
