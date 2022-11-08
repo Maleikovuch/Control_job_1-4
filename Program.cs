@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Введите количество строк:");
+﻿Console.WriteLine("Введите количество элементов:");
 int size = Convert.ToInt32(Console.ReadLine());
 
 string[] array = new string[size];
@@ -7,7 +7,7 @@ for (int i = 0; i < size; i++)
     Console.WriteLine("Введите строку №{0}", i + 1);
     array[i] = Console.ReadLine()!;                 // ! - принудительное разрешение возможного NULL (не изучали проверку на NULL)
 }
-Console.Write("Нажмите [Enter] для вывода вашего массива и созданного из него массива, у которого длина всех элементов >=3");
+Console.Write("Нажмите [Enter] для вывода вашего массива и созданного из него массива, у которого длина всех элементов <= 3");
 Console.ReadLine();
 
 string[] NewArrayWithElementsSizesNoMoreThreeSymbols(string[] array)
@@ -22,7 +22,6 @@ string[] NewArrayWithElementsSizesNoMoreThreeSymbols(string[] array)
     }
 
     string[] newArray = new string[lengthNewArroy];
-
     int j = 0;
     for (int i = 0; i < array.Length; i++)
     {
@@ -33,7 +32,6 @@ string[] NewArrayWithElementsSizesNoMoreThreeSymbols(string[] array)
         }
     }
     return newArray;
-
 }
 
 void PrintArray(string[] array)
